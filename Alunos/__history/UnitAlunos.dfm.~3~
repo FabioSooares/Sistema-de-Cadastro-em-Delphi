@@ -1,0 +1,341 @@
+object frmCadAlunos: TfrmCadAlunos
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
+  Caption = 'Cadastro de Alunos'
+  ClientHeight = 440
+  ClientWidth = 766
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poScreenCenter
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 48
+    Top = 24
+    Width = 286
+    Height = 37
+    Caption = 'Cadastro de Alunos'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -29
+    Font.Name = 'Fibra Light'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 48
+    Top = 130
+    Width = 15
+    Height = 18
+    Caption = 'ID'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -14
+    Font.Name = 'Fibra Light'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 144
+    Top = 130
+    Width = 44
+    Height = 18
+    Caption = 'Nome'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -14
+    Font.Name = 'Fibra Light'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label8: TLabel
+    Left = 543
+    Top = 136
+    Width = 107
+    Height = 18
+    Caption = 'Localizar Aluno'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -14
+    Font.Name = 'Fibra Light'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label5: TLabel
+    Left = 48
+    Top = 175
+    Width = 29
+    Height = 18
+    Caption = 'CPF'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -14
+    Font.Name = 'Fibra Light'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label4: TLabel
+    Left = 48
+    Top = 226
+    Width = 65
+    Height = 18
+    Caption = 'Endere'#231'o'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -14
+    Font.Name = 'Fibra Light'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label6: TLabel
+    Left = 48
+    Top = 277
+    Width = 42
+    Height = 18
+    Caption = 'Bairro'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -14
+    Font.Name = 'Fibra Light'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label7: TLabel
+    Left = 313
+    Top = 277
+    Width = 50
+    Height = 18
+    Caption = 'Cidade'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -14
+    Font.Name = 'Fibra Light'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label9: TLabel
+    Left = 48
+    Top = 328
+    Width = 19
+    Height = 18
+    Caption = 'UF'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -14
+    Font.Name = 'Fibra Light'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label10: TLabel
+    Left = 106
+    Top = 328
+    Width = 29
+    Height = 18
+    Caption = 'CEP'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -14
+    Font.Name = 'Fibra Light'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label12: TLabel
+    Left = 233
+    Top = 328
+    Width = 58
+    Height = 18
+    Caption = 'Telefone'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -14
+    Font.Name = 'Fibra Light'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label11: TLabel
+    Left = 48
+    Top = 376
+    Width = 39
+    Height = 18
+    Caption = 'Email'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -14
+    Font.Name = 'Fibra Light'
+    Font.Style = []
+    ParentFont = False
+  end
+  object DBEdit1: TDBEdit
+    Left = 48
+    Top = 148
+    Width = 73
+    Height = 21
+    DataField = 'id'
+    DataSource = dm.DSAlunos
+    TabOrder = 0
+  end
+  object txt_nome: TDBEdit
+    Left = 144
+    Top = 146
+    Width = 265
+    Height = 21
+    DataField = 'Nome'
+    DataSource = dm.DSAlunos
+    TabOrder = 1
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 144
+    Top = 80
+    Width = 512
+    Height = 33
+    DataSource = dm.DSResponsaveis
+    VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbInsert, nbDelete, nbPost, nbCancel]
+    TabOrder = 2
+  end
+  object txtLocalizar: TEdit
+    Left = 472
+    Top = 160
+    Width = 273
+    Height = 21
+    TabOrder = 3
+  end
+  object DBGrid1: TDBGrid
+    Left = 472
+    Top = 199
+    Width = 235
+    Height = 196
+    DataSource = dm.DSResponsaveis
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
+    TabOrder = 4
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'nome'
+        Title.Caption = 'Respons'#225'vel'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clNavy
+        Title.Font.Height = -19
+        Title.Font.Name = 'Fibra Light'
+        Title.Font.Style = [fsBold]
+        Visible = True
+      end>
+  end
+  object txt_cpf: TDBEdit
+    Left = 48
+    Top = 199
+    Width = 179
+    Height = 21
+    DataField = 'cpf'
+    DataSource = dm.DSAlunos
+    TabOrder = 5
+  end
+  object DBRadioGroup1: TDBRadioGroup
+    Left = 248
+    Top = 182
+    Width = 185
+    Height = 39
+    Caption = 'Sexo:'
+    Columns = 2
+    DataField = 'sexo'
+    DataSource = dm.DSAlunos
+    Items.Strings = (
+      'Feminino'
+      'Masculino')
+    TabOrder = 6
+    Values.Strings = (
+      'Feminino'
+      'Masculino')
+  end
+  object DBEdit2: TDBEdit
+    Left = 48
+    Top = 250
+    Width = 385
+    Height = 21
+    DataField = 'endereco'
+    DataSource = dm.DSAlunos
+    TabOrder = 7
+  end
+  object DBEdit3: TDBEdit
+    Left = 48
+    Top = 301
+    Width = 243
+    Height = 21
+    DataField = 'bairro'
+    DataSource = dm.DSAlunos
+    TabOrder = 8
+  end
+  object DBEdit4: TDBEdit
+    Left = 313
+    Top = 301
+    Width = 120
+    Height = 21
+    DataField = 'cidade'
+    DataSource = dm.DSAlunos
+    TabOrder = 9
+  end
+  object DBEdit5: TDBEdit
+    Left = 48
+    Top = 349
+    Width = 42
+    Height = 21
+    DataField = 'uf'
+    DataSource = dm.DSAlunos
+    TabOrder = 10
+  end
+  object DBEdit6: TDBEdit
+    Left = 106
+    Top = 349
+    Width = 103
+    Height = 21
+    DataField = 'cep'
+    DataSource = dm.DSAlunos
+    TabOrder = 11
+  end
+  object txt_telefone: TDBEdit
+    Left = 233
+    Top = 349
+    Width = 96
+    Height = 21
+    DataField = 'celular'
+    DataSource = dm.DSAlunos
+    TabOrder = 12
+  end
+  object DBRadioGroup2: TDBRadioGroup
+    Left = 335
+    Top = 328
+    Width = 98
+    Height = 45
+    Caption = 'Ensino Religioso'
+    Columns = 2
+    DataField = 'ensinoreligioso'
+    DataSource = dm.DSAlunos
+    Items.Strings = (
+      'Sim'
+      'N'#227'o')
+    TabOrder = 13
+    Values.Strings = (
+      '1'
+      '0')
+  end
+  object txt_email: TDBEdit
+    Left = 48
+    Top = 392
+    Width = 201
+    Height = 21
+    DataField = 'email'
+    DataSource = dm.DSAlunos
+    TabOrder = 14
+  end
+end

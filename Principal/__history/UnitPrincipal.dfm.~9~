@@ -1,0 +1,35 @@
+object frm_principal: Tfrm_principal
+  Left = 0
+  Top = 0
+  Caption = 'Sistema de Gest'#227'o Escolar'
+  ClientHeight = 326
+  ClientWidth = 765
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  Menu = MainMenu1
+  OldCreateOrder = False
+  WindowState = wsMaximized
+  PixelsPerInch = 96
+  TextHeight = 13
+  object MainMenu1: TMainMenu
+    Left = 48
+    Top = 8
+    object C1: TMenuItem
+      Caption = 'Cadastro'
+      object Responsveis1: TMenuItem
+        Caption = 'Respons'#225'veis'
+        ShortCut = 16466
+        OnClick = Responsveis1Click
+      end
+      object Alunos1: TMenuItem
+        Caption = 'Alunos'
+        ShortCut = 16449
+        OnClick = Alunos1Click
+      end
+    end
+  end
+end

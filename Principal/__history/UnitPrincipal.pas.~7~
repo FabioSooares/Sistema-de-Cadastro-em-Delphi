@@ -1,0 +1,44 @@
+unit UnitPrincipal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus;
+
+type
+  Tfrm_principal = class(TForm)
+    MainMenu1: TMainMenu;
+    C1: TMenuItem;
+    Responsveis1: TMenuItem;
+    Alunos1: TMenuItem;
+    procedure Responsveis1Click(Sender: TObject);
+    procedure Alunos1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frm_principal: Tfrm_principal;
+
+implementation
+
+{$R *.dfm}
+
+uses UnitCadResponsaveis;
+
+procedure Tfrm_principal.Alunos1Click(Sender: TObject);
+begin
+  Application.CreateForm(TfrmCadAlunos, frmCadAlunos);
+  frmCadAlunos.showModal;
+end;
+
+procedure Tfrm_principal.Responsveis1Click(Sender: TObject);
+begin
+  Application.CreateForm(Tfrm_cad_responsaveis, frm_cad_responsaveis);
+  frm_Cad_Responsaveis.showModal;
+end;
+
+end.

@@ -1,0 +1,62 @@
+unit UnitAlunos;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.Grids, Vcl.DBGrids,
+  Vcl.StdCtrls, Vcl.ExtCtrls, Vcl.DBCtrls, Vcl.Mask;
+
+type
+  TfrmCadAlunos = class(TForm)
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label8: TLabel;
+    txt_id: TDBEdit;
+    txt_nome: TDBEdit;
+    DBNavigator1: TDBNavigator;
+    txtLocalizar: TEdit;
+    DBAluno: TDBGrid;
+    Label5: TLabel;
+    txt_cpf: TDBEdit;
+    RBSexo: TDBRadioGroup;
+    Label4: TLabel;
+    txt_endereco: TDBEdit;
+    Label6: TLabel;
+    txt_bairro: TDBEdit;
+    Label7: TLabel;
+    txt_cidade: TDBEdit;
+    Label9: TLabel;
+    txt_uf: TDBEdit;
+    Label10: TLabel;
+    txt_cep: TDBEdit;
+    txt_telefone: TDBEdit;
+    Label12: TLabel;
+    RBEnsinoReligioso: TDBRadioGroup;
+    Label11: TLabel;
+    txt_email: TDBEdit;
+    Label13: TLabel;
+    DBResponsavel: TDBLookupComboBox;
+    procedure txtLocalizarChange(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmCadAlunos: TfrmCadAlunos;
+
+implementation
+
+{$R *.dfm}
+
+uses UnitDM;
+
+procedure TfrmCadAlunos.txtLocalizarChange(Sender: TObject);
+begin
+  dm.tbAlunos.locate('Nome', txtLocalizar.Text,[loPartialKey]);
+end;
+
+end.

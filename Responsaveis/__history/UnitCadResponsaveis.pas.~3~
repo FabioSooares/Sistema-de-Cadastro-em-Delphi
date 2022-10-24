@@ -1,0 +1,55 @@
+unit UnitCadResponsaveis;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Mask, Vcl.DBCtrls,
+  Vcl.ExtCtrls, Data.DB, Vcl.Grids, Vcl.DBGrids;
+
+type
+  Tfrm_cad_responsaveis = class(TForm)
+    Label1: TLabel;
+    Label2: TLabel;
+    DBEdit1: TDBEdit;
+    Label3: TLabel;
+    DBEdit2: TDBEdit;
+    Label4: TLabel;
+    DBEdit3: TDBEdit;
+    Label5: TLabel;
+    DBEdit4: TDBEdit;
+    Label6: TLabel;
+    DBEdit5: TDBEdit;
+    DBEdit6: TDBEdit;
+    Label7: TLabel;
+    DBRadioGroup1: TDBRadioGroup;
+    DBNavigator1: TDBNavigator;
+    Label8: TLabel;
+    txtLocalizar: TEdit;
+    DBGrid1: TDBGrid;
+    procedure DBNavigator1Click(Sender: TObject; Button: TNavigateBtn);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frm_cad_responsaveis: Tfrm_cad_responsaveis;
+
+implementation
+
+{$R *.dfm}
+
+uses UnitDM;
+
+procedure Tfrm_cad_responsaveis.DBNavigator1Click(Sender: TObject;
+  Button: TNavigateBtn);
+begin
+  if (Button = nbInsert) then
+  begin
+    dm.tbResponsaveisParentesco.value := 'Mãe';
+  end;
+end;
+
+end.
